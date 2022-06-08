@@ -1,4 +1,4 @@
-import { NewDiaryEntry, Weather, Visibility } from '../types'
+import { NewDiaryEntry, Weather, Visibility } from './types'
 
 const parseComment = (commentFromRequest: any): string => {
   if (!isString(commentFromRequest)) {
@@ -9,7 +9,7 @@ const parseComment = (commentFromRequest: any): string => {
 }
 
 const isString = (string: string): boolean => {
-  return typeof string !== 'string'
+  return typeof string === 'string'
 }
 
 const parseDate = (dateFromRequest: any): string => {
